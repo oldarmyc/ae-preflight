@@ -695,9 +695,7 @@ class TestSystemProfile(TestCase):
             'eth0': {
                 '80': 'open',
                 '443': 'closed',
-                '32009': 'closed',
-                '61009': 'closed',
-                '65535': 'closed'
+                '32009': 'closed'
             }
         }
         mock_response = mock.Mock()
@@ -705,8 +703,6 @@ class TestSystemProfile(TestCase):
             'open',
             'closed',
             'closed',
-            'closed',
-            'closed'
         ]
 
         with mock.patch(
@@ -734,16 +730,12 @@ class TestSystemProfile(TestCase):
             'eth0': {
                 '80': 'open',
                 '443': 'closed',
-                '32009': 'closed',
-                '61009': 'closed',
-                '65535': 'closed'
+                '32009': 'closed'
             }
         }
         mock_response = mock.Mock()
         mock_response.side_effect = [
             'open',
-            'closed',
-            'closed',
             'closed',
             'closed'
         ]

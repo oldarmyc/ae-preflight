@@ -77,7 +77,7 @@ DEFAULT_SYSCTL = {
     'net.ipv4.ip_forward': '1'
 }
 
-OPEN_PORTS = [80, 443, 32009, 61009, 65535]
+OPEN_PORTS = [80, 443, 32009]
 
 FILE_TYPES = ['xfs', 'ext4']
 
